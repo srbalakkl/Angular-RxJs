@@ -37,7 +37,7 @@ export class RxjsTutorComponent implements OnInit {
           observer.next('uiop');
           },1000)
         }catch (e){
-          console.log(e);
+          console.log(e);-
           observer.error(e)
         }
       }
