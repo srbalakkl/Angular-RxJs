@@ -6,6 +6,9 @@ import {FromEventOperatorComponent} from "./form-event-operator/from-event-opera
 import {IntervalComponent} from "./interval/interval.component";
 import {DebounceTimeComponent} from "./debounce-time/debounce-time.component";
 import {TapOperatorComponent} from "./tap-operator/tap-operator.component";
+import {
+  DistinctUntilChangedOperatorComponent
+} from "./distinct-until-changed-operator/distinct-until-changed-operator.component";
 
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: "full"},
@@ -14,7 +17,8 @@ const routes: Routes = [
   {path: 'fromEvent', component: FromEventOperatorComponent},
   {path: 'interval', component: IntervalComponent},
   {path: 'debounce', component: DebounceTimeComponent},
-  {path: 'tap', component: TapOperatorComponent}
+  {path: 'tap', component: TapOperatorComponent},
+  {path: 'distUnchngOperator', component: DistinctUntilChangedOperatorComponent}
 ];
 
 @NgModule({

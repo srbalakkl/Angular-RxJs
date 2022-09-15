@@ -10,6 +10,7 @@ import {IntervalComponent} from './interval/interval.component';
 import {DebounceTimeComponent} from './debounce-time/debounce-time.component';
 import {ReactiveFormsModule} from "@angular/forms";
 import {TapOperatorComponent} from './tap-operator/tap-operator.component';
+import { DistinctUntilChangedOperatorComponent } from './distinct-until-changed-operator/distinct-until-changed-operator.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import {TapOperatorComponent} from './tap-operator/tap-operator.component';
     FromEventOperatorComponent,
     IntervalComponent,
     DebounceTimeComponent,
-    TapOperatorComponent
+    TapOperatorComponent,
+    DistinctUntilChangedOperatorComponent
   ],
   imports: [
     BrowserModule,

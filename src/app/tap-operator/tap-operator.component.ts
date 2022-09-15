@@ -25,7 +25,6 @@ export class TapOperatorComponent implements OnInit {
          * ie Even if we change the x value,
          * It doesn't get affected in subscribe/output value.
          */
-
         x = x * 10;
         // this.data.push(x)
         console.log('From tap ', x);

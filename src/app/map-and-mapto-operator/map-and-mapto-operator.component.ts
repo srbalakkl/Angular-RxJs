@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {map, mapTo, of} from "rxjs";
+import {map, mapTo, Observable, of} from "rxjs";
 
 @Component({
   selector: 'app-map-and-mapto-operator',
@@ -27,20 +27,21 @@ export class MapAndMaptoOperatorComponent implements OnInit {
      * the r value = 16
      */
     of(1,2,3,4,5,6)
-      .pipe(map(v=>v+10))
+      .pipe(map(v=>v+10))//here the pipe() in used to combine the multiple operator
       // .subscribe(console.log)
-      .subscribe(r=>console.log(`the r value = ${r}`));
+      .subscribe(r=>console.log(`the r value = \n ${r}`));
 
     /**
      * mapTo()
      * Similar to map but,
      * It shows whatever value you provided on it
+     *
      * o/p: (below statement is executed 6 times)
      * the r value = request
      */
     of(1,2,3,4,5,6)
       .pipe(mapTo("request"))
-      .subscribe(r=>console.log(`the r value = ${r}`));
+      .subscribe(r=>console.log(`the r value of mapTo = \n ${r}`));
   }
 
 }
