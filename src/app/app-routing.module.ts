@@ -9,6 +9,8 @@ import {TapOperatorComponent} from "./tap-operator/tap-operator.component";
 import {
   DistinctUntilChangedOperatorComponent
 } from "./distinct-until-changed-operator/distinct-until-changed-operator.component";
+import {CombineLatestComponent} from "./combine-latest/combine-latest.component";
+import {SwitchMapComponent} from "./switch-map/switch-map.component";
 
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: "full"},
@@ -18,7 +20,9 @@ const routes: Routes = [
   {path: 'interval', component: IntervalComponent},
   {path: 'debounce', component: DebounceTimeComponent},
   {path: 'tap', component: TapOperatorComponent},
-  {path: 'distUnchngOperator', component: DistinctUntilChangedOperatorComponent}
+  {path: 'distUnchngOperator', component: DistinctUntilChangedOperatorComponent},
+  {path: 'combineLatest',component:CombineLatestComponent},
+  {path: 'switchmap',component:SwitchMapComponent}
 ];
 
 @NgModule({

@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import {map, mapTo, Observable, of} from "rxjs";
+import {Component, OnInit} from '@angular/core';
+import {map, mapTo, of} from "rxjs";
 
 @Component({
   selector: 'app-map-and-mapto-operator',
@@ -8,7 +8,8 @@ import {map, mapTo, Observable, of} from "rxjs";
 })
 export class MapAndMaptoOperatorComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
     console.log('hello')
@@ -16,7 +17,7 @@ export class MapAndMaptoOperatorComponent implements OnInit {
      * * Example for normal map
      * RxJS map()
      * operator is a transformation operator
-     * used to transform the items emitted by an Observable by applying a function to each item.
+     * used to transform the items(streams of data) emitted by an Observable by applying a function to each item.
      *
      * o/p:
      * the r value = 11
@@ -26,10 +27,10 @@ export class MapAndMaptoOperatorComponent implements OnInit {
      * the r value = 15
      * the r value = 16
      */
-    of(1,2,3,4,5,6)
-      .pipe(map(v=>v+10))//here the pipe() in used to combine the multiple operator
+    of(1, 2, 3, 4, 5, 6)
+      .pipe(map(v => v + 10))//here the pipe() in used to combine the multiple operator
       // .subscribe(console.log)
-      .subscribe(r=>console.log(`the r value = \n ${r}`));
+      .subscribe(r => console.log(`the r value = \n ${r}`));
 
     /**
      * mapTo()
@@ -39,9 +40,9 @@ export class MapAndMaptoOperatorComponent implements OnInit {
      * o/p: (below statement is executed 6 times)
      * the r value = request
      */
-    of(1,2,3,4,5,6)
+    of(1, 2, 3, 4, 5, 6)
       .pipe(mapTo("request"))
-      .subscribe(r=>console.log(`the r value of mapTo = \n ${r}`));
+      .subscribe(r => console.log(`the r value of mapTo = \n ${r}`));
   }
 
 }

@@ -11,6 +11,8 @@ import {DebounceTimeComponent} from './debounce-time/debounce-time.component';
 import {ReactiveFormsModule} from "@angular/forms";
 import {TapOperatorComponent} from './tap-operator/tap-operator.component';
 import { DistinctUntilChangedOperatorComponent } from './distinct-until-changed-operator/distinct-until-changed-operator.component';
+import { CombineLatestComponent } from './combine-latest/combine-latest.component';
+import { SwitchMapComponent } from './switch-map/switch-map.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { DistinctUntilChangedOperatorComponent } from './distinct-until-changed-
     IntervalComponent,
     DebounceTimeComponent,
     TapOperatorComponent,
-    DistinctUntilChangedOperatorComponent
+    DistinctUntilChangedOperatorComponent,
+    CombineLatestComponent,
+    SwitchMapComponent
   ],
   imports: [
     BrowserModule,
