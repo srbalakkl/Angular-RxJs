@@ -11,6 +11,8 @@ import {
 } from "./distinct-until-changed-operator/distinct-until-changed-operator.component";
 import {CombineLatestComponent} from "./combine-latest/combine-latest.component";
 import {SwitchMapComponent} from "./switch-map/switch-map.component";
+import {SubjectComponent} from "./subject/subject.component";
+import {ZipOperatorComponent} from "./zip-operator/zip-operator.component";
 
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: "full"},
@@ -21,12 +23,15 @@ const routes: Routes = [
   {path: 'debounce', component: DebounceTimeComponent},
   {path: 'tap', component: TapOperatorComponent},
   {path: 'distUnchngOperator', component: DistinctUntilChangedOperatorComponent},
-  {path: 'combineLatest',component:CombineLatestComponent},
-  {path: 'switchmap',component:SwitchMapComponent}
+  {path: 'combineLatest', component: CombineLatestComponent},
+  {path: 'switchmap', component: SwitchMapComponent},
+  {path: 'subject', component: SubjectComponent},
+  {path: 'zip',component:ZipOperatorComponent}
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+}

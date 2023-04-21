@@ -45,7 +45,6 @@ export class RxjsTutorComponent implements OnInit {
 
   //  now i'm subscribing the data
     this.agents.subscribe(data=>{
-      console.log('adsfdfgdfsg')
       console.log('the data = ',data)
       this.agentName = data;
       console.log('agent name = ',this.agentName)

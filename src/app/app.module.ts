@@ -13,6 +13,8 @@ import {TapOperatorComponent} from './tap-operator/tap-operator.component';
 import { DistinctUntilChangedOperatorComponent } from './distinct-until-changed-operator/distinct-until-changed-operator.component';
 import { CombineLatestComponent } from './combine-latest/combine-latest.component';
 import { SwitchMapComponent } from './switch-map/switch-map.component';
+import { SubjectComponent } from './subject/subject.component';
+import { ZipOperatorComponent } from './zip-operator/zip-operator.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { SwitchMapComponent } from './switch-map/switch-map.component';
     TapOperatorComponent,
     DistinctUntilChangedOperatorComponent,
     CombineLatestComponent,
-    SwitchMapComponent
+    SwitchMapComponent,
+    SubjectComponent,
+    ZipOperatorComponent
   ],
   imports: [
     BrowserModule,

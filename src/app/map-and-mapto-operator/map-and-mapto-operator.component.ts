@@ -41,7 +41,7 @@ export class MapAndMaptoOperatorComponent implements OnInit {
      * the r value = request
      */
     of(1, 2, 3, 4, 5, 6)
-      .pipe(mapTo("request"))
+      .pipe(mapTo((v: number)=>v+10))//<- here it shows v+10 as the output
       .subscribe(r => console.log(`the r value of mapTo = \n ${r}`));
   }
 

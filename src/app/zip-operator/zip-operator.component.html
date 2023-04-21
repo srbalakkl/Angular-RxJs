@@ -1,0 +1,16 @@
+<p>zip-operator works!</p>
+<button (click)="_flatBread.next('flat bread')" type="button">Add flat bread</button>
+<button (click)="_meat.next('meat')" type="button">Add Meat</button>
+<button (click)="_souse.next('sauce')" type="button">Add Sauce</button>
+<button (click)="_tomato.next('tomato')" type="button">Add Tomato</button>
+<button (click)="_cabbage.next('cabbage')" type="button">Add Cabbage</button>
+
+<ng-container *ngIf="shawarma$ | async as durum">
+  <section *ngIf="durum!.length >0">
+    <h2>Enjoy😁😁😁</h2>
+    <img alt="shawarma" src="assets/aaa.jpg">
+
+    <h5>Ingredients:</h5>
+    <pre>{{ durum | json}}</pre>
+  </section>
+</ng-container>
