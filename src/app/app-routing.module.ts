@@ -13,6 +13,7 @@ import {CombineLatestComponent} from "./combine-latest/combine-latest.component"
 import {SwitchMapComponent} from "./switch-map/switch-map.component";
 import {SubjectComponent} from "./subject/subject.component";
 import {ZipOperatorComponent} from "./zip-operator/zip-operator.component";
+import {BehaviourSubjectComponent} from "./behaviour-subject/behaviour-subject.component";
 
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: "full"},
@@ -26,7 +27,8 @@ const routes: Routes = [
   {path: 'combineLatest', component: CombineLatestComponent},
   {path: 'switchmap', component: SwitchMapComponent},
   {path: 'subject', component: SubjectComponent},
-  {path: 'zip',component:ZipOperatorComponent}
+  {path: 'zip',component:ZipOperatorComponent},
+  {path: 'behaviourSubject',component:BehaviourSubjectComponent}
 ];
 
 @NgModule({

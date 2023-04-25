@@ -15,6 +15,7 @@ import { CombineLatestComponent } from './combine-latest/combine-latest.componen
 import { SwitchMapComponent } from './switch-map/switch-map.component';
 import { SubjectComponent } from './subject/subject.component';
 import { ZipOperatorComponent } from './zip-operator/zip-operator.component';
+import { BehaviourSubjectComponent } from './behaviour-subject/behaviour-subject.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { ZipOperatorComponent } from './zip-operator/zip-operator.component';
     CombineLatestComponent,
     SwitchMapComponent,
     SubjectComponent,
-    ZipOperatorComponent
+    ZipOperatorComponent,
+    BehaviourSubjectComponent
   ],
   imports: [
     BrowserModule,
