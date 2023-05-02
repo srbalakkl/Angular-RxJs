@@ -23,13 +23,13 @@ export class CombineLatestComponent implements OnInit {
      * whose values are calculated from the latest values of each of its input Observables.*/
 
     let $obs = new Observable((data) => {
-      setTimeout(_ => {
+      setTimeout(() => {
         data.next(1)
       }, 1000)
     })
 
     let $obs1 = new Observable((data) => {
-      setTimeout(_ => {
+      setTimeout(() => {
         data.next(10)
       }, 5000)
     })

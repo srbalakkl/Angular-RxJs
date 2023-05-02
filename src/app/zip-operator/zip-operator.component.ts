@@ -29,7 +29,7 @@ export class ZipOperatorComponent implements OnInit {
       this._tomato.pipe(tap(console.log)),
       this._cabbage.pipe(tap(console.log))
     ).pipe(
-      tap((durum)=>console.log('Enjoy saamy!',durum))
+      tap((durum)=>console.log('Enjoy the durum(shawarma)!',durum))
     )
 
   }

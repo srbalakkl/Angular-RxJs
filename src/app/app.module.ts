@@ -16,6 +16,7 @@ import { SwitchMapComponent } from './switch-map/switch-map.component';
 import { SubjectComponent } from './subject/subject.component';
 import { ZipOperatorComponent } from './zip-operator/zip-operator.component';
 import { BehaviourSubjectComponent } from './behaviour-subject/behaviour-subject.component';
+import { StartWithComponent } from './start-with/start-with.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { BehaviourSubjectComponent } from './behaviour-subject/behaviour-subject
     SwitchMapComponent,
     SubjectComponent,
     ZipOperatorComponent,
-    BehaviourSubjectComponent
+    BehaviourSubjectComponent,
+    StartWithComponent
   ],
   imports: [
     BrowserModule,

@@ -14,6 +14,7 @@ import {SwitchMapComponent} from "./switch-map/switch-map.component";
 import {SubjectComponent} from "./subject/subject.component";
 import {ZipOperatorComponent} from "./zip-operator/zip-operator.component";
 import {BehaviourSubjectComponent} from "./behaviour-subject/behaviour-subject.component";
+import {StartWithComponent} from "./start-with/start-with.component";
 
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: "full"},
@@ -28,7 +29,8 @@ const routes: Routes = [
   {path: 'switchmap', component: SwitchMapComponent},
   {path: 'subject', component: SubjectComponent},
   {path: 'zip',component:ZipOperatorComponent},
-  {path: 'behaviourSubject',component:BehaviourSubjectComponent}
+  {path: 'behaviourSubject',component:BehaviourSubjectComponent},
+  {path: 'startWith',component:StartWithComponent}
 ];
 
 @NgModule({
