@@ -16,6 +16,7 @@ import { SwitchMapComponent } from './switch-map/switch-map.component';
 import { SubjectComponent } from './subject/subject.component';
 import { ZipOperatorComponent } from './zip-operator/zip-operator.component';
 import { BehaviourSubjectComponent } from './behaviour-subject/behaviour-subject.component';
+import { SwitchAndMergeMapComponent } from './switch-and-merge-map/switch-and-merge-map.component';
 import { StartWithComponent } from './start-with/start-with.component';
 
 @NgModule({
@@ -32,6 +33,8 @@ import { StartWithComponent } from './start-with/start-with.component';
     SwitchMapComponent,
     SubjectComponent,
     ZipOperatorComponent,
+    BehaviourSubjectComponent,
+    SwitchAndMergeMapComponent,
     BehaviourSubjectComponent,
     StartWithComponent
   ],
