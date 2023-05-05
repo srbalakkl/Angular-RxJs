@@ -29,11 +29,11 @@ const routes: Routes = [
   {path: 'combineLatest', component: CombineLatestComponent},
   {path: 'switchmap', component: SwitchMapComponent},
   {path: 'subject', component: SubjectComponent},
-  {path: 'zip',component:ZipOperatorComponent},
-  {path: 'behaviourSubject',component:BehaviourSubjectComponent},
+  {path: 'zip', component: ZipOperatorComponent},
+  {path: 'behaviourSubject', component: BehaviourSubjectComponent},
   {path: 'switch_and_mergeMap',component:SwitchAndMergeMapComponent},
   {path: 'behaviourSubject',component:BehaviourSubjectComponent},
-  {path: 'startWith',component:StartWithComponent}
+  {path: 'startWith', component: StartWithComponent}
 ];
 
 @NgModule({

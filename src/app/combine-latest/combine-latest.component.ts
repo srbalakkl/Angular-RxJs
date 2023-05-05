@@ -25,17 +25,21 @@ export class CombineLatestComponent implements OnInit {
     let $obs = new Observable((data) => {
       setTimeout(() => {
         data.next(1)
-      }, 1000)
+      }, 500)
     })
 
     let $obs1 = new Observable((data) => {
       setTimeout(() => {
         data.next(10)
-      }, 5000)
+      }, 1000)
+
+      setTimeout(() =>data.next(100),2000);//<- CombineLatest will also
+      // emit values whenever the value is changed.
+
     })
 
     combineLatest([$obs, $obs1]).subscribe((data) => {
-      console.log('data', data)
+      console.log('data after 500 + 1000 millisecond:', data)
     })
 
     /*  let x;
