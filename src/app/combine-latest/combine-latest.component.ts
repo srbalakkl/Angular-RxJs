@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {combineLatest, Observable} from "rxjs";
+import {combineLatest, Observable, zip} from "rxjs";
 
 @Component({
   selector: 'app-combine-latest',
@@ -35,11 +35,15 @@ export class CombineLatestComponent implements OnInit {
 
       setTimeout(() =>data.next(100),2000);//<- CombineLatest will also
       // emit values whenever the value is changed.
-
+      // But the "Zip Operator" doesn't work when the value is changed.
     })
 
     combineLatest([$obs, $obs1]).subscribe((data) => {
-      console.log('data after 500 + 1000 millisecond:', data)
+      console.log('CombineLatest Operator: Data after 500 + 1000 millisecond', data)
+    })
+
+    zip($obs, $obs1).subscribe((data) => {//<- Note: This zip operator doesn't work when the value is changed from 1000 tp 100
+      console.log('Zip Operator:', data)
     })
 
     /*  let x;
