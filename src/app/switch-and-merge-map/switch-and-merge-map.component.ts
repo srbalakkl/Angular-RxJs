@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {map, mergeMap, Observable, Subject, take, tap, zip} from "rxjs";
+import {map, Observable, Subject, switchMap, take, tap, zip} from "rxjs";
 
 type Durum = ['flat bread', 'meat', 'sauce', 'tomato', 'cabbage'];
 
@@ -47,7 +47,7 @@ export class SwitchAndMergeMapComponent implements OnInit {
       this._tomato.pipe(tap(console.log)),
       this._cabbage.pipe(tap(console.log))
     ).pipe(
-      tap((durum) => console.log('Enjoy saamy!', durum))
+      tap((durum) => console.log('Enjoy the durum!', durum))
     )
 
 
@@ -73,7 +73,9 @@ export class SwitchAndMergeMapComponent implements OnInit {
       //   once we get an order then we have to cook the durum so that
       //   we have to merge our durum stream into our delivery stream.
 
-      mergeMap(({amount, customer_id}) => this.shawarma$.pipe(
+      // mergeMap(({amount, customer_id}) => this.shawarma$.pipe(
+      switchMap(({amount, customer_id}) => this.shawarma$.pipe(//<- switchMap is very much
+        // similar to tha mergeMap but the only diff is switchMap doesn't keep the previous one.
         // This shawarma part will be executed only after the above part / all ingredient buttons are pressed.
         take(amount),
         map(durum => ({product_name: durum, customer_id}))//<- Destructuring using aero function.

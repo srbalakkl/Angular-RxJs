@@ -16,6 +16,10 @@ import {ZipOperatorComponent} from "./zip-operator/zip-operator.component";
 import {BehaviourSubjectComponent} from "./behaviour-subject/behaviour-subject.component";
 import {SwitchAndMergeMapComponent} from "./switch-and-merge-map/switch-and-merge-map.component";
 import {StartWithComponent} from "./start-with/start-with.component";
+import {SchedulerComponent} from "./scheduler/scheduler.component";
+import {
+  SchedulerWithAnimeAndIntervalComponent
+} from "./scheduler-with-anime-and-interval/scheduler-with-anime-and-interval.component";
 
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: "full"},
@@ -33,7 +37,9 @@ const routes: Routes = [
   {path: 'behaviourSubject', component: BehaviourSubjectComponent},
   {path: 'switch_and_mergeMap',component:SwitchAndMergeMapComponent},
   {path: 'behaviourSubject',component:BehaviourSubjectComponent},
-  {path: 'startWith', component: StartWithComponent}
+  {path: 'startWith',component:StartWithComponent},
+  {path: 'schedulers',component:SchedulerComponent},
+  {path: 'animeInterval',component:SchedulerWithAnimeAndIntervalComponent}
 ];
 
 @NgModule({
