@@ -47,7 +47,7 @@ export class SchedulerComponent implements OnInit {
 
     // Here the asyncScheduler make our observable as microtask.
     of("Stream Value with delay async scheduler").pipe(delay(0, asyncScheduler)).subscribe(console.log);
-
+ 
   }
 
 }

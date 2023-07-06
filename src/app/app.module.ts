@@ -21,6 +21,7 @@ import { StartWithComponent } from './start-with/start-with.component';
 import { ConcatAndExhaustMapComponent } from './concat-and-exhaust-map/concat-and-exhaust-map.component';
 import { SchedulerComponent } from './scheduler/scheduler.component';
 import { SchedulerWithAnimeAndIntervalComponent } from './scheduler-with-anime-and-interval/scheduler-with-anime-and-interval.component';
+import { SchedulerWithExecutionContextComponent } from './scheduler-with-execution-context/scheduler-with-execution-context.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { SchedulerWithAnimeAndIntervalComponent } from './scheduler-with-anime-a
     StartWithComponent,
     ConcatAndExhaustMapComponent,
     SchedulerComponent,
-    SchedulerWithAnimeAndIntervalComponent
+    SchedulerWithAnimeAndIntervalComponent,
+    SchedulerWithExecutionContextComponent
   ],
   imports: [
     BrowserModule,
