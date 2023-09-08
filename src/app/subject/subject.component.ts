@@ -29,8 +29,8 @@ export class SubjectComponent implements OnInit {
       next: (v) => console.log(`observerB: ${v}`),
     });
 
-    subject.next(1);
-    subject.next(2);
+    // subject.next(1);
+    // subject.next(2);
 
     /**
      * Since subject is an observable,

@@ -22,6 +22,7 @@ import { ConcatAndExhaustMapComponent } from './concat-and-exhaust-map/concat-an
 import { SchedulerComponent } from './scheduler/scheduler.component';
 import { SchedulerWithAnimeAndIntervalComponent } from './scheduler-with-anime-and-interval/scheduler-with-anime-and-interval.component';
 import { SchedulerWithExecutionContextComponent } from './scheduler-with-execution-context/scheduler-with-execution-context.component';
+import { CombineLatestWithComponent } from './combine-latest-with/combine-latest-with.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { SchedulerWithExecutionContextComponent } from './scheduler-with-executi
     ConcatAndExhaustMapComponent,
     SchedulerComponent,
     SchedulerWithAnimeAndIntervalComponent,
-    SchedulerWithExecutionContextComponent
+    SchedulerWithExecutionContextComponent,
+    CombineLatestWithComponent
   ],
   imports: [
     BrowserModule,

@@ -20,6 +20,7 @@ import {SchedulerComponent} from "./scheduler/scheduler.component";
 import {
   SchedulerWithAnimeAndIntervalComponent
 } from "./scheduler-with-anime-and-interval/scheduler-with-anime-and-interval.component";
+import {CombineLatestWithComponent} from "./combine-latest-with/combine-latest-with.component";
 
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: "full"},
@@ -39,7 +40,8 @@ const routes: Routes = [
   {path: 'behaviourSubject',component:BehaviourSubjectComponent},
   {path: 'startWith',component:StartWithComponent},
   {path: 'schedulers',component:SchedulerComponent},
-  {path: 'animeInterval',component:SchedulerWithAnimeAndIntervalComponent}
+  {path: 'animeInterval',component:SchedulerWithAnimeAndIntervalComponent},
+  {path: 'CombineLatestWith',component:CombineLatestWithComponent}
 ];
 
 @NgModule({
