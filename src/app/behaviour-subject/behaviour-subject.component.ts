@@ -25,7 +25,7 @@ export class BehaviourSubjectComponent implements OnInit {
 // The first Subscription : 0 (since it's the initial value)
 // The first Subscription : 1
 // The first Subscription : 2
-// The second Subscription : 2 (since it's the initial value for the seconde subscriber)
+// The second Subscription : 2 (since it's the initial value for the second subscriber)
 // The first Subscription : 3
 // The second Subscription : 3
   }

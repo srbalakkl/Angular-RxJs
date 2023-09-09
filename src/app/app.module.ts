@@ -23,6 +23,7 @@ import { SchedulerComponent } from './scheduler/scheduler.component';
 import { SchedulerWithAnimeAndIntervalComponent } from './scheduler-with-anime-and-interval/scheduler-with-anime-and-interval.component';
 import { SchedulerWithExecutionContextComponent } from './scheduler-with-execution-context/scheduler-with-execution-context.component';
 import { CombineLatestWithComponent } from './combine-latest-with/combine-latest-with.component';
+import { OfVsFromComponent } from './of-vs-from/of-vs-from.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { CombineLatestWithComponent } from './combine-latest-with/combine-latest
     SchedulerComponent,
     SchedulerWithAnimeAndIntervalComponent,
     SchedulerWithExecutionContextComponent,
-    CombineLatestWithComponent
+    CombineLatestWithComponent,
+    OfVsFromComponent
   ],
   imports: [
     BrowserModule,
