@@ -24,6 +24,7 @@ import { SchedulerWithAnimeAndIntervalComponent } from './scheduler-with-anime-a
 import { SchedulerWithExecutionContextComponent } from './scheduler-with-execution-context/scheduler-with-execution-context.component';
 import { CombineLatestWithComponent } from './combine-latest-with/combine-latest-with.component';
 import { OfVsFromComponent } from './of-vs-from/of-vs-from.component';
+import { TakeUntilWithIntervalComponent } from './take-until-with-interval/take-until-with-interval.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { OfVsFromComponent } from './of-vs-from/of-vs-from.component';
     SchedulerWithAnimeAndIntervalComponent,
     SchedulerWithExecutionContextComponent,
     CombineLatestWithComponent,
-    OfVsFromComponent
+    OfVsFromComponent,
+    TakeUntilWithIntervalComponent
   ],
   imports: [
     BrowserModule,

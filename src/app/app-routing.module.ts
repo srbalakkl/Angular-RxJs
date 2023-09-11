@@ -22,6 +22,7 @@ import {
 } from "./scheduler-with-anime-and-interval/scheduler-with-anime-and-interval.component";
 import {CombineLatestWithComponent} from "./combine-latest-with/combine-latest-with.component";
 import {OfVsFromComponent} from "./of-vs-from/of-vs-from.component";
+import {TakeUntilWithIntervalComponent} from "./take-until-with-interval/take-until-with-interval.component";
 
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: "full"},
@@ -43,7 +44,8 @@ const routes: Routes = [
   {path: 'schedulers',component:SchedulerComponent},
   {path: 'animeInterval',component:SchedulerWithAnimeAndIntervalComponent},
   {path: 'CombineLatestWith',component:CombineLatestWithComponent},
-  {path: 'of_vs_from',component:OfVsFromComponent}
+  {path: 'of_vs_from',component:OfVsFromComponent},
+  {path: 'TakeUntilWithInterval',component:TakeUntilWithIntervalComponent}
 ];
 
 @NgModule({
