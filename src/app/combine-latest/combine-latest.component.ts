@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {combineLatest, combineLatestWith, Observable, zip} from "rxjs";
+import {BehaviorSubject, combineLatest, combineLatestWith, Observable, zip} from "rxjs";
 
 @Component({
   selector: 'app-combine-latest',
@@ -44,7 +44,7 @@ export class CombineLatestComponent implements OnInit {
       },2500)
     })
 
-    combineLatest([$obs, $obs1, $obs2]).subscribe((data) => {
+    combineLatest([$obs, $obs1, $obs2,this.refreshToken$]).subscribe((data) => {
       console.log('CombineLatest Operator: Data after 500 + 1000 (+2000) + 2500 millisecond', data)
     })
 
@@ -53,7 +53,7 @@ export class CombineLatestComponent implements OnInit {
     })
 
     $obs.pipe(
-      combineLatestWith([$obs1,$obs2])
+      combineLatestWith([$obs1,$obs2,this.refreshToken$])
     ).subscribe((data) => {
       console.log('CombineLatestWith Operator: Data after 500 + 1000 (+2000) + 2500 millisecond', data)
     })
@@ -65,6 +65,12 @@ export class CombineLatestComponent implements OnInit {
 
       console.log(x);*/
 
+  }
+
+  refreshToken$ = new BehaviorSubject(undefined);
+  refresh(){
+    this.refreshToken$.next(undefined)
+    this.refreshToken$.complete();
   }
 
 }

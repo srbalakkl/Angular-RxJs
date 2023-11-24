@@ -26,7 +26,7 @@ export class SchedulerComponent implements OnInit {
    * */
 
   runAsync() {
-    setTimeout(_ => console.log("setTimeout Callback"), 0);//macro task
+    setTimeout(() => console.log("setTimeout Callback"), 0);//macro task
     Promise.resolve("Promise Value").then(console.log);//micro task
     of("Stream Value").subscribe(console.log);//normal task
   }
@@ -43,11 +43,11 @@ export class SchedulerComponent implements OnInit {
     Promise.resolve("Promise Value").then(console.log);//micro task (1st Priority)
     of("Stream Value with asap scheduler").pipe(observeOn(asapScheduler)).subscribe(console.log);//converted async/microtask
     of("Stream Value (Synchronous Observable)").subscribe(console.log);//normal task or microtask
-    setTimeout(_ => console.log("setTimeout Callback"), 0);//macro task
+    setTimeout(() => console.log("setTimeout Callback"), 0);//macro task
 
     // Here the asyncScheduler make our observable as microtask.
     of("Stream Value with delay async scheduler").pipe(delay(0, asyncScheduler)).subscribe(console.log);
- 
+
   }
 
 }

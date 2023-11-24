@@ -28,7 +28,7 @@ export class OfVsFromComponent implements OnInit {
      * Of : Does not take an array, iterable, promise, or another observable-like source as a single argument.
      * Instead, it takes any number of arguments, each of which represents a value to be emitted by the observable.
      *
-     * From: The from operator is used to create an observable from an array, iterable, promise, or other observable-like sources.
+     * From: Used to create an observable from an array, iterable, promise, or other observable-like sources.
      * It can convert various data sources into observables.
      *
      *

@@ -41,6 +41,9 @@ export class SubjectComponent implements OnInit {
 
     const observable = from([10,20,30]);
     observable.subscribe(subject);
+    // observable.subscribe(r=>{
+    //   console.log(r)
+    // })
 
   }
 

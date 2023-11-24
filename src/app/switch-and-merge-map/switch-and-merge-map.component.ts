@@ -58,7 +58,7 @@ export class SwitchAndMergeMapComponent implements OnInit {
      *
      */
 
-    /*     this.delivery$ = this._order.pipe(
+/*         this.delivery$ = this._order.pipe(
          tap(order => console.log('New Order : ', order)),
          //   once we get an order then we have to cook the durum so that
          //   we have to merge our durum stream into our delivery stream.
