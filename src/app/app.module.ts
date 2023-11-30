@@ -25,6 +25,8 @@ import { SchedulerWithExecutionContextComponent } from './scheduler-with-executi
 import { CombineLatestWithComponent } from './combine-latest-with/combine-latest-with.component';
 import { OfVsFromComponent } from './of-vs-from/of-vs-from.component';
 import { TakeUntilWithIntervalComponent } from './take-until-with-interval/take-until-with-interval.component';
+import { ExhaustMapComponent } from './exhaust-map/exhaust-map.component';
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -50,12 +52,14 @@ import { TakeUntilWithIntervalComponent } from './take-until-with-interval/take-
     SchedulerWithExecutionContextComponent,
     CombineLatestWithComponent,
     OfVsFromComponent,
-    TakeUntilWithIntervalComponent
+    TakeUntilWithIntervalComponent,
+    ExhaustMapComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
