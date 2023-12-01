@@ -27,6 +27,7 @@ import { OfVsFromComponent } from './of-vs-from/of-vs-from.component';
 import { TakeUntilWithIntervalComponent } from './take-until-with-interval/take-until-with-interval.component';
 import { ExhaustMapComponent } from './exhaust-map/exhaust-map.component';
 import {HttpClientModule} from "@angular/common/http";
+import { MergeAllComponent } from './merge-all/merge-all.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import {HttpClientModule} from "@angular/common/http";
     CombineLatestWithComponent,
     OfVsFromComponent,
     TakeUntilWithIntervalComponent,
-    ExhaustMapComponent
+    ExhaustMapComponent,
+    MergeAllComponent
   ],
   imports: [
     BrowserModule,

@@ -24,6 +24,7 @@ import {CombineLatestWithComponent} from "./combine-latest-with/combine-latest-w
 import {OfVsFromComponent} from "./of-vs-from/of-vs-from.component";
 import {TakeUntilWithIntervalComponent} from "./take-until-with-interval/take-until-with-interval.component";
 import {ExhaustMapComponent} from "./exhaust-map/exhaust-map.component";
+import {MergeAllComponent} from "./merge-all/merge-all.component";
 
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: "full"},
@@ -47,7 +48,8 @@ const routes: Routes = [
   {path: 'CombineLatestWith',component:CombineLatestWithComponent},
   {path: 'of_vs_from',component:OfVsFromComponent},
   {path: 'TakeUntilWithInterval',component:TakeUntilWithIntervalComponent},
-  {path: 'exhaustMap',component:ExhaustMapComponent}
+  {path: 'exhaustMap',component:ExhaustMapComponent},
+  {path: 'mergeAll',component:MergeAllComponent}
 ];
 
 @NgModule({
