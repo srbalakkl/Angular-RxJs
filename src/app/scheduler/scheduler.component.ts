@@ -17,7 +17,7 @@ export class SchedulerComponent implements OnInit {
   }
 
   /**
-   * Thw execution of JS code is based on the following priority.
+   * The execution of JS code is based on the following priority.
    *
    * 1. normal/sync task,
    * 2. micro task,

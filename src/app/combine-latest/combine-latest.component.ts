@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {BehaviorSubject, combineLatest, combineLatestWith, Observable, zip} from "rxjs";
+import {BehaviorSubject, combineLatest, Observable, zip} from "rxjs";
 
 @Component({
   selector: 'app-combine-latest',
@@ -33,30 +33,32 @@ export class CombineLatestComponent implements OnInit {
         data.next(10)
       }, 1000)
 
-      setTimeout(() =>data.next(100),2000);//<- CombineLatest will also
-      // emit values whenever the value is changed.
+      setTimeout(() => {
+        data.next(100)
+      }, 2000);//<-Here, the CombineLatest operator will take the latest value 100 instead of older value 10
+
       // But the "Zip Operator" doesn't work when the value is changed.
     })
 
     let $obs2 = new Observable((data) => {
       setTimeout(() => {
         data.next(1000)
-      },2500)
+      }, 2500)
     })
 
-    combineLatest([$obs, $obs1, $obs2,this.refreshToken$]).subscribe((data) => {
-      console.log('CombineLatest Operator: Data after 500 + 1000 (+2000) + 2500 millisecond', data)
+    combineLatest([$obs, $obs1, $obs2, this.refreshToken$]).subscribe((data) => {
+      console.log('CombineLatest Operator: Data after 500 + 1000 + 2500 millisecond', data)
     })
 
-    zip($obs, $obs1).subscribe((data) => {//<- Note: This zip operator doesn't work when the value is changed from 10 to 100
+    zip($obs, $obs1, this.refreshToken$).subscribe((data) => {//<- Note: This zip operator doesn't work when the value is changed from 10 to 100
       console.log('Zip Operator:doesn\'t work when the value is changed from 10 to 100', data)
     })
-
-    $obs.pipe(
-      combineLatestWith([$obs1,$obs2,this.refreshToken$])
-    ).subscribe((data) => {
-      console.log('CombineLatestWith Operator: Data after 500 + 1000 (+2000) + 2500 millisecond', data)
-    })
+    //
+    // $obs.pipe(
+    //   combineLatestWith([$obs1,$obs2,this.refreshToken$])
+    // ).subscribe((data) => {
+    //   console.log('CombineLatestWith Operator: Data after 500 + 1000 (+2000) + 2500 millisecond', data)
+    // })
 
     /*  let x;
       of(1,2,3,4,5,6).pipe(
@@ -68,9 +70,10 @@ export class CombineLatestComponent implements OnInit {
   }
 
   refreshToken$ = new BehaviorSubject(undefined);
-  refresh(){
+
+  refresh() {
     this.refreshToken$.next(undefined)
-    this.refreshToken$.complete();
+    // this.refreshToken$.complete();//<- note: The refreshToken will not work if the observable is  completed (compete()) .
   }
 
 }
