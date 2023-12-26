@@ -11,6 +11,7 @@ export class SubjectComponent implements OnInit {
   constructor() {
   }
 
+  subject!:Subject<any>;
   ngOnInit(): void {
 
     /**
@@ -20,12 +21,13 @@ export class SubjectComponent implements OnInit {
      *
      * */
 
-    const subject: Subject<number> = new Subject<number>();
+    // const subject: Subject<number> = new Subject<number>();
+    this.subject = new Subject<number>();
 
-    subject.subscribe({
+    this.subject.subscribe({
       next: (v) => console.log(`observerA: ${v}`),
     });
-    subject.subscribe({
+    this.subject.subscribe({
       next: (v) => console.log(`observerB: ${v}`),
     });
 
@@ -40,11 +42,13 @@ export class SubjectComponent implements OnInit {
      * */
 
     const observable = from([10,20,30]);
-    observable.subscribe(subject);
-    // observable.subscribe(r=>{
-    //   console.log(r)
-    // })
+    observable.subscribe(this.subject);
 
+  }
+
+  addMoreValueToSubject() {
+    const observable = from([40,50]);
+    observable.subscribe(this.subject);
   }
 
 }
