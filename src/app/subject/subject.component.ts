@@ -11,13 +11,16 @@ export class SubjectComponent implements OnInit {
   constructor() {
   }
 
-  subject!:Subject<any>;
+  subject!: Subject<any>;
+
   ngOnInit(): void {
 
     /**
      *  A Subject is like an Observable,
      * but can multicast to many Observers.
      * Subjects are like EventEmitters: they maintain a registry of many listeners.
+     *
+     * Note :Every Subject is an <b>Observable and an Observer</b>. You can subscribe to a Subject, and you can call next to feed values as well as error and complete
      *
      * */
 
@@ -31,8 +34,11 @@ export class SubjectComponent implements OnInit {
       next: (v) => console.log(`observerB: ${v}`),
     });
 
-    // subject.next(1);
-    // subject.next(2);
+    this.subject.next(1);
+    this.subject.next(2);
+    this.subject.next(() => {
+      console.log('\n')
+    });
 
     /**
      * Since subject is an observable,
@@ -41,13 +47,13 @@ export class SubjectComponent implements OnInit {
      * eg:     ---see below--
      * */
 
-    const observable = from([10,20,30]);
+    const observable = from([10, 20, 30]);
     observable.subscribe(this.subject);
 
   }
 
   addMoreValueToSubject() {
-    const observable = from([40,50]);
+    const observable = from([40, 50]);
     observable.subscribe(this.subject);
   }
 

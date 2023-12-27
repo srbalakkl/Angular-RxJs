@@ -18,7 +18,7 @@ export class RxjsTutorComponent implements OnInit {
 
     /**
      * @Publisher is a person who create an observable that contain subscriber's functions for the subscriber.
-     * @Consumer is a person who #subscribe() the observable.
+     * @Consumer is a person who subscribe() the observable.
      *
      */
 
@@ -56,6 +56,7 @@ export class RxjsTutorComponent implements OnInit {
         }
       }
     );
+
 
     //  now i'm subscribing the data
     this.agents.subscribe(data => {
