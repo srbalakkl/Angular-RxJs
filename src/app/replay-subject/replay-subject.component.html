@@ -1,13 +1,21 @@
-<p>replay-subject works!</p>
+<h3>replay-subject works!</h3>
+<p>Major Difference between <b>subject</b> and <b>replySubject</b> is subject only produce value for current observers but replay subject produce value for the <em>future observers.</em></p>
 <ol>
   <li>Replay Subject is Pretty much same as Behaviour Subject With Couple of Exception</li>
   <ol>
     <li>Replay Subject Doesn't have default value.</li>
-    <li>Replay Subject will replay an subject even after observing an error while Subject & Behaviour Subject doesn't.</li>
+    <li>Replay Subject will replay an subject even after observing an error while Subject & Behaviour Subject doesn't.
+    </li>
   </ol>
-  <li>2 major configuration we need to consider in replaySubject are </li>
+  <li>2 major configuration we need to consider in replaySubject are</li>
   <ol>
     <li>Buffer Size</li>
+    <ul>
+      <li>Define How many items are stored in an array,Default is infinite,</li>
+    </ul>
     <li>Window Time(milliseconds)</li>
+    <ul>
+      <li>Time to hold the value in the buffer before removing it from the buffer.</li>
+    </ul>
   </ol>
 </ol>
