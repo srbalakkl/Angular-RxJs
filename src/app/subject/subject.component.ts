@@ -20,7 +20,8 @@ export class SubjectComponent implements OnInit {
      * but can multicast to many Observers.
      * Subjects are like EventEmitters: they maintain a registry of many listeners.
      *
-     * Note :Every Subject is an <b>Observable and an Observer</b>. You can subscribe to a Subject, and you can call next to feed values as well as error and complete
+     * Note :Every Subject is an <b>Observable and an Observer</b>. You can subscribe to a Subject,
+     * and you can call next to feed values as well as error and complete
      *
      * */
 

@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {asapScheduler, asyncScheduler, delay, observeOn, of} from "rxjs";
+import {asapScheduler, asyncScheduler, BehaviorSubject, delay, observeOn, of} from "rxjs";
 
 @Component({
   selector: 'app-scheduler',
@@ -8,11 +8,12 @@ import {asapScheduler, asyncScheduler, delay, observeOn, of} from "rxjs";
 })
 export class SchedulerComponent implements OnInit {
 
+  sub$ = new BehaviorSubject('Behavior Subject...!')
   constructor() {
   }
 
   ngOnInit(): void {
-    // this.runAsync();
+    this.runAsync();
     // this.runAsyncWithScheduler();
   }
 
@@ -26,9 +27,10 @@ export class SchedulerComponent implements OnInit {
    * */
 
   runAsync() {
-    setTimeout(() => console.log("setTimeout Callback"), 0);//macro task
+    setTimeout(() => console.log("setTimeout Callback"), 0);//macro/async task
     Promise.resolve("Promise Value").then(console.log);//micro task
-    of("Stream Value").subscribe(console.log);//normal task
+    of("Stream Value").subscribe(console.log);//normal/sync task
+    this.sub$.subscribe((r)=>console.log(r));//<- neither micro nor macro task
   }
 
   runAsyncWithScheduler() {
@@ -36,13 +38,13 @@ export class SchedulerComponent implements OnInit {
      * Even though 'of' & 'for' operator is an observable,It will execute the value synchronously instead of asynchronously
      * But this can be fixed by adding
      * observeOn(asapScheduler)->Convert it into microtask(ie execute 1st)
-     * observeOn(asyncScheduler)->Convert it into normal task(ie execute Last)
+     * observeOn(asyncScheduler)->Convert it into macrotask(ie execute Last like setTimeout())
      * */
 
     console.log('***************')
     Promise.resolve("Promise Value").then(console.log);//micro task (1st Priority)
     of("Stream Value with asap scheduler").pipe(observeOn(asapScheduler)).subscribe(console.log);//converted async/microtask
-    of("Stream Value (Synchronous Observable)").subscribe(console.log);//normal task or microtask
+    of("Stream Value (Synchronous Observable)").subscribe(console.log);//normal/sync task
     setTimeout(() => console.log("setTimeout Callback"), 0);//macro task
 
     // Here the asyncScheduler make our observable as microtask.

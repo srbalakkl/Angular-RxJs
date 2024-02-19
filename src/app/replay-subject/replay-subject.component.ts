@@ -12,6 +12,9 @@ export class ReplaySubjectComponent {
   constructor() {
     /**
      * @description Here <b> new Subject() </b> instance would print only <b> 2 and 3 </b>
+     *
+     * Replay subject will consume a value (i.e, subscribe()) immediately when the
+     * producer produces it. (i.e, when the next() method is called by producer.)
      * */
 
     // const replaySubject = new Subject();
@@ -20,14 +23,15 @@ export class ReplaySubjectComponent {
     replaySubject.next(1)
 
     replaySubject.subscribe((value) => {
-      console.log('\nobserver 1', value);
+      console.log('\nobserver A', value);
     });
 
     replaySubject.next(2)
     replaySubject.next(3)
+    // replaySubject.complete();//<- This will stop the execution of replaySubject.next(4)
 
     replaySubject.subscribe((value) => {
-      console.log('\nobserver 2', value);
+      console.log('\nobserver B', value);
     })
 
     replaySubject.next(4)
