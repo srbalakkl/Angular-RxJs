@@ -9,7 +9,7 @@ import {Observable} from "rxjs";
 export class RxjsTutorComponent implements OnInit {
 
   agents!: Observable<string>;
-  agentName!: string;
+  // agentName!: string;
 
   constructor() {
   }
@@ -22,6 +22,7 @@ export class RxjsTutorComponent implements OnInit {
      *
      */
 
+    // PUBLISHER:
     this.agents = new Observable<string>(
       function (observer) {
         try {
@@ -54,15 +55,25 @@ export class RxjsTutorComponent implements OnInit {
           console.log(e);
           observer.error(e)
         }
+        // observer.complete();//<- If you enable this line none of the async code in the above observable got executed.
       }
     );
 
 
-    //  now i'm subscribing the data
-    this.agents.subscribe(data => {
-      console.log('the data = ', data)
-      this.agentName = data;
-      console.log('agent name = ', this.agentName)
+    // CONSUMER: now I'm subscribing the data
+
+    // this.agents.subscribe(data => {
+    //   console.log('the data = ', data)
+    //   this.agentName = data;
+    //   console.log('agent name = ', this.agentName)
+    // })
+
+    this.agents.subscribe({//<- Here we are subscribing to the observer (i.e, wrapped inside the {})
+      next: x => console.log('Observer got a next value: ' + x),
+      error: err => console.error('Observer got an error: ' + err),
+      complete: () => console.log('Observer got a complete notification'),
     })
+
+
   }
 }

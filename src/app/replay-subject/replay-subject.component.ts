@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {BehaviorSubject, Observable, ReplaySubject, Subject} from "rxjs";
+import {ReplaySubject} from "rxjs";
 
 @Component({
   selector: 'app-replay-subject',
