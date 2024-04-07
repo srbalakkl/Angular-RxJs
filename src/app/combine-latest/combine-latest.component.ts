@@ -46,11 +46,11 @@ export class CombineLatestComponent implements OnInit {
       }, 2500)
     })
 
-    combineLatest([$obs, $obs1, $obs2, this.refreshToken$]).subscribe((data) => {
+    combineLatest([$obs, $obs1, $obs2, this.refreshToken$]).subscribe((data) => {//<- only display the value after all the details are received.
       console.log('CombineLatest Operator: Data after 500 + 1000 + 2500 millisecond', data)
     })
 
-    zip($obs, $obs1, this.refreshToken$).subscribe((data) => {//<- Note: This zip operator doesn't work when the value is changed from 10 to 100
+    zip($obs, $obs1, $obs2, this.refreshToken$).subscribe((data) => {//<- Note: This zip operator doesn't work when the value is changed from 10 to 100
       console.log('Zip Operator:doesn\'t work when the value is changed from 10 to 100', data)
     })
     //

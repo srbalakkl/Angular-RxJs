@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {of, switchMap} from "rxjs";
+import {map, mergeMap, of, switchMap} from "rxjs";
 
 @Component({
   selector: 'app-switch-map',
@@ -16,12 +16,20 @@ export class SwitchMapComponent implements OnInit {
   ngOnInit(): void {
 
     /*
-    * The Angular SwitchMap maps each value from the source observable into an inner observable,
+    * The Angular SwitchMap maps each value from the source observable(outer observable) into an inner observable(returned observable),
     *   Basically it switches to the newest observable discarding all other observable.
+    *
+    * * The difference between map & switchMap operators are
+    *
+    * * Map operator doesn't take multiple inner/returned observable but switchMap does,
+    * * Map support normal input values but switchMap support only observable as returned values.
+    *
     * */
 
     let obs$ = of(10, 20, 30, 40, 50).pipe(
-      switchMap(x => of(x, x + 1, x + 2)),
+      switchMap(x => of(x, x + 1, x + 2,"\n")),
+      // mergeMap(m=> of('m'))
+      // map(x=> x+2)//remove /n to make the switch map works
     ).subscribe(x => console.log(x));
 
     // obs$.subscribe(x=> console.log(x))
