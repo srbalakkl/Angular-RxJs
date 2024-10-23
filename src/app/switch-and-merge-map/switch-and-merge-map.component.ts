@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {map, mergeMap, Observable, Subject, switchMap, take, tap, zip} from "rxjs";
+import {map, Observable, Subject, switchMap, take, tap, zip} from "rxjs";
 
 type Durum = ['flat bread', 'meat', 'sauce', 'tomato', 'cabbage'];
 
@@ -73,7 +73,7 @@ export class SwitchAndMergeMapComponent implements OnInit {
       //   once we get an order then we have to cook the durum so that
       //   we have to merge our durum stream into our delivery stream.
 
-      // mergeMap(({amount, customer_id}) => this.shawarma$.pipe(//<- unlike switchMap the mergeMap remember the value & it will work even if you haven't select all order items for 2nd order, but you selected that missing order item in first order
+      // mergeMap(({amount, customer_id}) => this.shawarma$.pipe(//<- unlike switchMap the mergeMap remember the value & it will work even if you haven't select all order items for 2nd order, because, you selected that missing order item in first order
       switchMap(({amount, customer_id}) => this.shawarma$.pipe(//<- switchMap is very much
         // similar to tha mergeMap but the only diff is switchMap doesn't keep the previous one.
         // This shawarma part will be executed only after the above part / all ingredient buttons are pressed.
@@ -86,11 +86,14 @@ export class SwitchAndMergeMapComponent implements OnInit {
       //   the emission mergeMap will subscribe the durum.
       tap(product => console.log('Deliver the Product : ', product))
     );
+
+
   }
 
   dispatchOrder() {
     const amount = Math.floor(Math.random() * 3) + 1;
-    ++customer_id;
+    // ++customer_id;
     this._order.next({amount, customer_id})
   }
+
 }

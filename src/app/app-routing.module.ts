@@ -27,6 +27,7 @@ import {ExhaustMapComponent} from "./exhaust-map/exhaust-map.component";
 import {MergeAllComponent} from "./merge-all/merge-all.component";
 import {ReplaySubjectComponent} from "./replay-subject/replay-subject.component";
 import {AsyncSubjectComponent} from "./async-subject/async-subject.component";
+import {TakeWhileOperatorComponent} from "./take-while-operator/take-while-operator.component";
 
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: "full"},
@@ -54,6 +55,7 @@ const routes: Routes = [
   {path: 'mergeAll',component:MergeAllComponent},
   {path: 'replaySubject',component:ReplaySubjectComponent},
   {path: 'asyncSubject',component:AsyncSubjectComponent},
+  {path: 'takeWhile',component:TakeWhileOperatorComponent},
 ];
 
 @NgModule({

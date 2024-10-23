@@ -18,5 +18,8 @@
 <div class="flex-container">
   <div class="flex-item">
     <p>Counter = {{counter}}</p>
+    <ng-container *ngIf="obs$|async as ob">
+      <p>c = {{ob}}</p>
+    </ng-container>
   </div>
 </div>

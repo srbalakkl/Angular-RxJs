@@ -21,8 +21,7 @@ export class SchedulerWithExecutionContextComponent implements OnInit {
 
     of("Task 3").subscribe(console.log);//microtask
 
-    setTimeout(()=> {
-      console.log("Task 4")},0)//macrotask
+    setTimeout(()=> {console.log("Task 4")}, 0)//macrotask
 
     const pm = new Promise( resolve => {
       resolve("Task 5");

@@ -1,17 +1,18 @@
-import {Component, OnInit} from '@angular/core';
-import {map, mergeMap, of, switchMap} from "rxjs";
+import {AfterViewInit, ChangeDetectorRef, Component, OnInit} from '@angular/core';
+import {map, mergeMap, Observable, of, Subject, Subscription, switchMap, takeWhile} from "rxjs";
 
 @Component({
   selector: 'app-switch-map',
   templateUrl: './switch-map.component.html',
   styleUrls: ['./switch-map.component.sass']
 })
-export class SwitchMapComponent implements OnInit {
+export class SwitchMapComponent implements OnInit,AfterViewInit {
 
-  constructor() {
+  constructor(private cd:ChangeDetectorRef) {
   }
 
-  counter = 0;
+  counter= 0;
+  obs$!:Observable<any>
 
   ngOnInit(): void {
 
@@ -47,6 +48,22 @@ export class SwitchMapComponent implements OnInit {
             })
           )
           .subscribe((r)=>console.log(r))*/
+
+  }
+
+  ngAfterViewInit(): void {
+    this.obs$ = of(10, 20, 30, 40, 50).pipe(
+      switchMap(x => of(x, x + 1, x + 2,"\n")),
+      // mergeMap(m=> of(m,m+1,m+2,"\n"))//check the durum component for correct mergeMap() operator.
+      // map(x=> x+2)//remove /n to make the switch map works
+    );
+
+    // console.log(this.cd.detectChanges())
+
+    // this.obs$.subscribe(x => {
+    //   this.counter = x;
+    //   console.log(x)
+    // });
 
   }
 
