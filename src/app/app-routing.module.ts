@@ -28,6 +28,7 @@ import {MergeAllComponent} from "./merge-all/merge-all.component";
 import {ReplaySubjectComponent} from "./replay-subject/replay-subject.component";
 import {AsyncSubjectComponent} from "./async-subject/async-subject.component";
 import {TakeWhileOperatorComponent} from "./take-while-operator/take-while-operator.component";
+import {HotAndColdObservablesComponent} from "./hot-and-cold-observables/hot-and-cold-observables.component";
 
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: "full"},
@@ -43,19 +44,20 @@ const routes: Routes = [
   {path: 'subject', component: SubjectComponent},
   {path: 'zip', component: ZipOperatorComponent},
   {path: 'behaviourSubject', component: BehaviourSubjectComponent},
-  {path: 'switch_and_mergeMap',component:SwitchAndMergeMapComponent},
-  {path: 'behaviourSubject',component:BehaviourSubjectComponent},
-  {path: 'startWith',component:StartWithComponent},
-  {path: 'schedulers',component:SchedulerComponent},
-  {path: 'animeInterval',component:SchedulerWithAnimeAndIntervalComponent},
-  {path: 'CombineLatestWith',component:CombineLatestWithComponent},
-  {path: 'of_vs_from',component:OfVsFromComponent},
-  {path: 'TakeUntilWithInterval',component:TakeUntilWithIntervalComponent},
-  {path: 'exhaustMap',component:ExhaustMapComponent},
-  {path: 'mergeAll',component:MergeAllComponent},
-  {path: 'replaySubject',component:ReplaySubjectComponent},
-  {path: 'asyncSubject',component:AsyncSubjectComponent},
-  {path: 'takeWhile',component:TakeWhileOperatorComponent},
+  {path: 'switch_and_mergeMap', component: SwitchAndMergeMapComponent},
+  {path: 'behaviourSubject', component: BehaviourSubjectComponent},
+  {path: 'startWith', component: StartWithComponent},
+  {path: 'schedulers', component: SchedulerComponent},
+  {path: 'animeInterval', component: SchedulerWithAnimeAndIntervalComponent},
+  {path: 'CombineLatestWith', component: CombineLatestWithComponent},
+  {path: 'of_vs_from', component: OfVsFromComponent},
+  {path: 'TakeUntilWithInterval', component: TakeUntilWithIntervalComponent},
+  {path: 'exhaustMap', component: ExhaustMapComponent},
+  {path: 'mergeAll', component: MergeAllComponent},
+  {path: 'replaySubject', component: ReplaySubjectComponent},
+  {path: 'asyncSubject', component: AsyncSubjectComponent},
+  {path: 'takeWhile', component: TakeWhileOperatorComponent},
+  {path: 'hot_cold', component: HotAndColdObservablesComponent},
 ];
 
 @NgModule({
