@@ -15,13 +15,13 @@ export class PreventMemoryLeaksComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     interval(1000).pipe(
       takeUntil(this.unsubscribe$),
-      // takeUntilDestroyed(this.destroyRef)//another way to prevent m/y leaks. but, it works only after @angular/code16 version.
-      ).subscribe();
+      // takeUntilDestroyed(this.destroyRef)//another way to prevent m/y leaks. but, it works only after @angular/core16 version.
+      ).subscribe(r=>console.log(r));
   }
 
   ngOnDestroy() {
-    this.unsubscribe$.next();
-    this.unsubscribe$.complete();
+    // this.unsubscribe$.next();
+    // this.unsubscribe$.complete();
   }
 
 

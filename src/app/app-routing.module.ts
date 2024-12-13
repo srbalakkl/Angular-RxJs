@@ -29,6 +29,7 @@ import {ReplaySubjectComponent} from "./replay-subject/replay-subject.component"
 import {AsyncSubjectComponent} from "./async-subject/async-subject.component";
 import {TakeWhileOperatorComponent} from "./take-while-operator/take-while-operator.component";
 import {HotAndColdObservablesComponent} from "./hot-and-cold-observables/hot-and-cold-observables.component";
+import {PreventMemoryLeaksComponent} from "./prevent-memory-leaks/prevent-memory-leaks.component";
 
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: "full"},
@@ -58,6 +59,7 @@ const routes: Routes = [
   {path: 'asyncSubject', component: AsyncSubjectComponent},
   {path: 'takeWhile', component: TakeWhileOperatorComponent},
   {path: 'hot_cold', component: HotAndColdObservablesComponent},
+  {path: 'memoryLeak', component: PreventMemoryLeaksComponent},
 ];
 
 @NgModule({
