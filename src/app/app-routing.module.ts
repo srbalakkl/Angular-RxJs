@@ -31,6 +31,7 @@ import {TakeWhileOperatorComponent} from "./take-while-operator/take-while-opera
 import {HotAndColdObservablesComponent} from "./hot-and-cold-observables/hot-and-cold-observables.component";
 import {PreventMemoryLeaksComponent} from "./prevent-memory-leaks/prevent-memory-leaks.component";
 import {ConcatAndExhaustMapComponent} from "./concat-and-exhaust-map/concat-and-exhaust-map.component";
+import {SwitchMapVsExhaustMapComponent} from "./switch-map-vs-exhaust-map/switch-map-vs-exhaust-map.component";
 
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: "full"},
@@ -62,6 +63,7 @@ const routes: Routes = [
   {path: 'takeWhile', component: TakeWhileOperatorComponent},
   {path: 'hot_cold', component: HotAndColdObservablesComponent},
   {path: 'memoryLeak', component: PreventMemoryLeaksComponent},
+  {path: 'SwitchMapVsExhaustMap',component:SwitchMapVsExhaustMapComponent}
 ];
 
 @NgModule({

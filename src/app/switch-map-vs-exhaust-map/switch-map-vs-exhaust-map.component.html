@@ -1,0 +1,9 @@
+<h1>ExhaustMap</h1>
+
+<p>This one is more similar in spirit to switchMap.
+  To recap, switchMap will cancel any inner observable in progress if a new value arrives from the outer observable.
+  The <b>exhaustMap operator will ignore values from the outer observable</b> if it already has an active subscription for the inner observable.
+  Once the inner observable completes, it will start accepting values from the outer observable again,
+  but any values that were emitted before the completion of the inner observable will be missed.</p>
+
+<a href="https://www.linkedin.com/pulse/power-high-order-observables-flattening-operators-josimar-bezerra-fazhf" target="_blank">Click here for more info about flattening operator</a>

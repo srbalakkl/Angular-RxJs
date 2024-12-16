@@ -36,7 +36,7 @@ export class CombineLatestComponent implements OnInit {
 
       setTimeout(() => {
         data.next(100)
-      }, 2000);//<-Here, the CombineLatest operator will take the latest value 100 instead of older value 10
+      }, 2000);//<-Here, the CombineLatest operator will take the latest value 100 instead of older value 10 like zip operator.
 
       // But the "Zip Operator" doesn't work when the value is changed.
     })
