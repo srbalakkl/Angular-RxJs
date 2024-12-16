@@ -2,9 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import {of, Subject} from "rxjs";
 
 @Component({
-  selector: 'app-concat-and-exhaust-map',
-  templateUrl: './concat-and-exhaust-map.component.html',
-  styleUrls: ['./concat-and-exhaust-map.component.sass']
+    selector: 'app-concat-and-exhaust-map',
+    templateUrl: './concat-and-exhaust-map.component.html',
+    styleUrls: ['./concat-and-exhaust-map.component.sass'],
+    standalone: false
 })
 export class ConcatAndExhaustMapComponent implements OnInit {
 

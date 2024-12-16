@@ -16,9 +16,10 @@ interface Product {
 let customer_id = 0;
 
 @Component({
-  selector: 'app-switch-and-merge-map',
-  templateUrl: './switch-and-merge-map.component.html',
-  styleUrls: ['./switch-and-merge-map.component.sass']
+    selector: 'app-switch-and-merge-map',
+    templateUrl: './switch-and-merge-map.component.html',
+    styleUrls: ['./switch-and-merge-map.component.sass'],
+    standalone: false
 })
 export class SwitchAndMergeMapComponent implements OnInit {
   shawarma$!: Observable<Durum>;

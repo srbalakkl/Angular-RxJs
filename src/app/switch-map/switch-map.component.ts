@@ -2,9 +2,10 @@ import {AfterViewInit, ChangeDetectorRef, Component, OnInit} from '@angular/core
 import {map, mergeMap, Observable, of, Subject, Subscription, switchMap, takeWhile} from "rxjs";
 
 @Component({
-  selector: 'app-switch-map',
-  templateUrl: './switch-map.component.html',
-  styleUrls: ['./switch-map.component.sass']
+    selector: 'app-switch-map',
+    templateUrl: './switch-map.component.html',
+    styleUrls: ['./switch-map.component.sass'],
+    standalone: false
 })
 export class SwitchMapComponent implements OnInit,AfterViewInit {
 

@@ -2,9 +2,10 @@ import {Component, OnInit} from '@angular/core';
 import {interval, of, startWith} from "rxjs";
 
 @Component({
-  selector: 'app-start-with',
-  templateUrl: './start-with.component.html',
-  styleUrls: ['./start-with.component.sass']
+    selector: 'app-start-with',
+    templateUrl: './start-with.component.html',
+    styleUrls: ['./start-with.component.sass'],
+    standalone: false
 })
 export class StartWithComponent implements OnInit {
 

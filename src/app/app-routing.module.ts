@@ -30,6 +30,7 @@ import {AsyncSubjectComponent} from "./async-subject/async-subject.component";
 import {TakeWhileOperatorComponent} from "./take-while-operator/take-while-operator.component";
 import {HotAndColdObservablesComponent} from "./hot-and-cold-observables/hot-and-cold-observables.component";
 import {PreventMemoryLeaksComponent} from "./prevent-memory-leaks/prevent-memory-leaks.component";
+import {ConcatAndExhaustMapComponent} from "./concat-and-exhaust-map/concat-and-exhaust-map.component";
 
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: "full"},
@@ -53,6 +54,7 @@ const routes: Routes = [
   {path: 'CombineLatestWith', component: CombineLatestWithComponent},
   {path: 'of_vs_from', component: OfVsFromComponent},
   {path: 'TakeUntilWithInterval', component: TakeUntilWithIntervalComponent},
+  {path: 'ConcatAndExhaustMapComponent',component: ConcatAndExhaustMapComponent},
   {path: 'exhaustMap', component: ExhaustMapComponent},
   {path: 'mergeAll', component: MergeAllComponent},
   {path: 'replaySubject', component: ReplaySubjectComponent},

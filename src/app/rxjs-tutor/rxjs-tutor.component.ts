@@ -2,9 +2,10 @@ import {Component, OnInit} from '@angular/core';
 import {Observable} from "rxjs";
 
 @Component({
-  selector: 'app-rxjs-tutor',
-  templateUrl: './rxjs-tutor.component.html',
-  styleUrls: ['./rxjs-tutor.component.sass']
+    selector: 'app-rxjs-tutor',
+    templateUrl: './rxjs-tutor.component.html',
+    styleUrls: ['./rxjs-tutor.component.sass'],
+    standalone: false
 })
 export class RxjsTutorComponent implements OnInit {
 

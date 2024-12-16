@@ -3,9 +3,10 @@ import {map, mapTo, of} from "rxjs";
 import {log} from "@angular-devkit/build-angular/src/builders/ssr-dev-server";
 
 @Component({
-  selector: 'app-map-and-mapto-operator',
-  templateUrl: './map-and-mapto-operator.component.html',
-  styleUrls: ['./map-and-mapto-operator.component.sass']
+    selector: 'app-map-and-mapto-operator',
+    templateUrl: './map-and-mapto-operator.component.html',
+    styleUrls: ['./map-and-mapto-operator.component.sass'],
+    standalone: false
 })
 export class MapAndMaptoOperatorComponent implements OnInit {
 

@@ -2,9 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import {from, interval, Observable, take} from "rxjs";
 
 @Component({
-  selector: 'app-interval',
-  templateUrl: './interval.component.html',
-  styleUrls: ['./interval.component.sass']
+    selector: 'app-interval',
+    templateUrl: './interval.component.html',
+    styleUrls: ['./interval.component.sass'],
+    standalone: false
 })
 export class IntervalComponent implements OnInit {
   /**

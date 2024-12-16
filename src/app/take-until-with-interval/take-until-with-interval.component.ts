@@ -2,9 +2,10 @@ import {Component, OnInit} from '@angular/core';
 import {BehaviorSubject, interval, take, tap, timer} from "rxjs";
 
 @Component({
-  selector: 'app-take-until-with-interval',
-  templateUrl: './take-until-with-interval.component.html',
-  styleUrls: ['./take-until-with-interval.component.sass']
+    selector: 'app-take-until-with-interval',
+    templateUrl: './take-until-with-interval.component.html',
+    styleUrls: ['./take-until-with-interval.component.sass'],
+    standalone: false
 })
 export class TakeUntilWithIntervalComponent implements OnInit {
 

@@ -2,9 +2,10 @@ import {Component, OnInit} from '@angular/core';
 import {interval, map, merge, mergeAll, mergeMap, take} from "rxjs";
 
 @Component({
-  selector: 'app-merge-all',
-  templateUrl: './merge-all.component.html',
-  styleUrls: ['./merge-all.component.sass']
+    selector: 'app-merge-all',
+    templateUrl: './merge-all.component.html',
+    styleUrls: ['./merge-all.component.sass'],
+    standalone: false
 })
 export class MergeAllComponent implements OnInit {
 

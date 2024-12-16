@@ -11,12 +11,13 @@ import {
   switchMap,
   take, tap
 } from "rxjs";
-import {HttpClient} from "@angular/common/http";
+import { HttpClient } from "@angular/common/http";
 
 @Component({
-  selector: 'app-exhaust-map',
-  templateUrl: './exhaust-map.component.html',
-  styleUrls: ['./exhaust-map.component.sass']
+    selector: 'app-exhaust-map',
+    templateUrl: './exhaust-map.component.html',
+    styleUrls: ['./exhaust-map.component.sass'],
+    standalone: false
 })
 export class ExhaustMapComponent implements OnInit {
 

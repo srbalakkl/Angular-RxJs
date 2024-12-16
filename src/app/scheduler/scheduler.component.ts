@@ -2,9 +2,10 @@ import {Component, OnInit} from '@angular/core';
 import {asapScheduler, asyncScheduler, BehaviorSubject, delay, observeOn, of} from "rxjs";
 
 @Component({
-  selector: 'app-scheduler',
-  templateUrl: './scheduler.component.html',
-  styleUrls: ['./scheduler.component.sass']
+    selector: 'app-scheduler',
+    templateUrl: './scheduler.component.html',
+    styleUrls: ['./scheduler.component.sass'],
+    standalone: false
 })
 export class SchedulerComponent implements OnInit {
 

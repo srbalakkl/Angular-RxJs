@@ -2,9 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import {from, of} from "rxjs";
 
 @Component({
-  selector: 'app-of-vs-from',
-  templateUrl: './of-vs-from.component.html',
-  styleUrls: ['./of-vs-from.component.sass']
+    selector: 'app-of-vs-from',
+    templateUrl: './of-vs-from.component.html',
+    styleUrls: ['./of-vs-from.component.sass'],
+    standalone: false
 })
 export class OfVsFromComponent implements OnInit {
 

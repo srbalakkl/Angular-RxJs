@@ -2,9 +2,10 @@ import {Component, OnInit} from '@angular/core';
 import {distinctUntilChanged, from} from "rxjs";
 
 @Component({
-  selector: 'app-distinct-until-changed-operator',
-  templateUrl: './distinct-until-changed-operator.component.html',
-  styleUrls: ['./distinct-until-changed-operator.component.sass']
+    selector: 'app-distinct-until-changed-operator',
+    templateUrl: './distinct-until-changed-operator.component.html',
+    styleUrls: ['./distinct-until-changed-operator.component.sass'],
+    standalone: false
 })
 export class DistinctUntilChangedOperatorComponent implements OnInit {
 

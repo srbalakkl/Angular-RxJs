@@ -2,11 +2,10 @@ import { Component } from '@angular/core';
 import {AsyncSubject} from "rxjs";
 
 @Component({
-  selector: 'app-async-subject',
-  standalone: true,
-  imports: [],
-  templateUrl: './async-subject.component.html',
-  styleUrl: './async-subject.component.sass'
+    selector: 'app-async-subject',
+    imports: [],
+    templateUrl: './async-subject.component.html',
+    styleUrl: './async-subject.component.sass'
 })
 export class AsyncSubjectComponent {
 

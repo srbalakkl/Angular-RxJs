@@ -2,9 +2,10 @@ import {Component, OnInit} from '@angular/core';
 import {of, tap} from "rxjs";
 
 @Component({
-  selector: 'app-tap-operator',
-  templateUrl: './tap-operator.component.html',
-  styleUrls: ['./tap-operator.component.sass']
+    selector: 'app-tap-operator',
+    templateUrl: './tap-operator.component.html',
+    styleUrls: ['./tap-operator.component.sass'],
+    standalone: false
 })
 export class TapOperatorComponent implements OnInit {
 

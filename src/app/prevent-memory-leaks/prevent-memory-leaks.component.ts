@@ -3,11 +3,10 @@ import {interval, Subject, takeUntil} from "rxjs";
 import {takeUntilDestroyed} from "@angular/core/rxjs-interop";
 
 @Component({
-  selector: 'app-prevent-memory-leaks',
-  standalone: true,
-  imports: [],
-  templateUrl: './prevent-memory-leaks.component.html',
-  styleUrl: './prevent-memory-leaks.component.sass'
+    selector: 'app-prevent-memory-leaks',
+    imports: [],
+    templateUrl: './prevent-memory-leaks.component.html',
+    styleUrl: './prevent-memory-leaks.component.sass'
 })
 export class PreventMemoryLeaksComponent implements OnInit, OnDestroy {
   private unsubscribe$: Subject<void> = new Subject<void>();

@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import {animationFrameScheduler, interval, Observable, take, tap} from "rxjs";
 
 @Component({
-  selector: 'app-scheduler-with-anime-and-interval',
-  template: `
+    selector: 'app-scheduler-with-anime-and-interval',
+    template: `
     <p>
       scheduler-with-anime-and-interval works!
     </p>
@@ -12,8 +12,8 @@ import {animationFrameScheduler, interval, Observable, take, tap} from "rxjs";
     </div><div [style.width.%]="progress$ | async" style="height: 25px;background: red">
     </div>
   `,
-  styles: [
-  ]
+    styles: [],
+    standalone: false
 })
 export class SchedulerWithAnimeAndIntervalComponent implements OnInit {
 

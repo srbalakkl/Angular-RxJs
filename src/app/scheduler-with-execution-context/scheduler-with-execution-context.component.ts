@@ -2,14 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import {asapScheduler, asyncScheduler, observeOn, of} from "rxjs";
 
 @Component({
-  selector: 'app-scheduler-with-execution-context',
-  template: `
+    selector: 'app-scheduler-with-execution-context',
+    template: `
     <p>
       scheduler-with-execution-context works!
     </p>
   `,
-  styles: [
-  ]
+    styles: [],
+    standalone: false
 })
 export class SchedulerWithExecutionContextComponent implements OnInit {
 

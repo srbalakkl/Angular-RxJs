@@ -26,44 +26,37 @@ import { CombineLatestWithComponent } from './combine-latest-with/combine-latest
 import { OfVsFromComponent } from './of-vs-from/of-vs-from.component';
 import { TakeUntilWithIntervalComponent } from './take-until-with-interval/take-until-with-interval.component';
 import { ExhaustMapComponent } from './exhaust-map/exhaust-map.component';
-import {HttpClientModule} from "@angular/common/http";
+import { provideHttpClient, withInterceptorsFromDi } from "@angular/common/http";
 import { MergeAllComponent } from './merge-all/merge-all.component';
 
-@NgModule({
-  declarations: [
-    AppComponent,
-    RxjsTutorComponent,
-    MapAndMaptoOperatorComponent,
-    FromEventOperatorComponent,
-    IntervalComponent,
-    DebounceTimeComponent,
-    TapOperatorComponent,
-    DistinctUntilChangedOperatorComponent,
-    CombineLatestComponent,
-    SwitchMapComponent,
-    SubjectComponent,
-    ZipOperatorComponent,
-    BehaviourSubjectComponent,
-    SwitchAndMergeMapComponent,
-    BehaviourSubjectComponent,
-    StartWithComponent,
-    ConcatAndExhaustMapComponent,
-    SchedulerComponent,
-    SchedulerWithAnimeAndIntervalComponent,
-    SchedulerWithExecutionContextComponent,
-    CombineLatestWithComponent,
-    OfVsFromComponent,
-    TakeUntilWithIntervalComponent,
-    ExhaustMapComponent,
-    MergeAllComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    ReactiveFormsModule,
-    HttpClientModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
-})
+@NgModule({ declarations: [
+        AppComponent,
+        RxjsTutorComponent,
+        MapAndMaptoOperatorComponent,
+        FromEventOperatorComponent,
+        IntervalComponent,
+        DebounceTimeComponent,
+        TapOperatorComponent,
+        DistinctUntilChangedOperatorComponent,
+        CombineLatestComponent,
+        SwitchMapComponent,
+        SubjectComponent,
+        ZipOperatorComponent,
+        BehaviourSubjectComponent,
+        SwitchAndMergeMapComponent,
+        BehaviourSubjectComponent,
+        StartWithComponent,
+        ConcatAndExhaustMapComponent,
+        SchedulerComponent,
+        SchedulerWithAnimeAndIntervalComponent,
+        SchedulerWithExecutionContextComponent,
+        CombineLatestWithComponent,
+        OfVsFromComponent,
+        TakeUntilWithIntervalComponent,
+        ExhaustMapComponent,
+        MergeAllComponent
+    ],
+    bootstrap: [AppComponent], imports: [BrowserModule,
+        AppRoutingModule,
+        ReactiveFormsModule], providers: [provideHttpClient(withInterceptorsFromDi())] })
 export class AppModule { }

@@ -2,9 +2,10 @@ import {Component, OnInit} from '@angular/core';
 import {BehaviorSubject, combineLatest, Observable, takeUntil, zip} from "rxjs";
 
 @Component({
-  selector: 'app-combine-latest',
-  templateUrl: './combine-latest.component.html',
-  styleUrls: ['./combine-latest.component.sass']
+    selector: 'app-combine-latest',
+    templateUrl: './combine-latest.component.html',
+    styleUrls: ['./combine-latest.component.sass'],
+    standalone: false
 })
 export class CombineLatestComponent implements OnInit {
   //For CombineLatest to work 'each observable' (actually it'll wait for emit) is needed to emit at latest one value

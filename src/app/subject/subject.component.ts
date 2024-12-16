@@ -2,9 +2,10 @@ import {Component, OnInit} from '@angular/core';
 import {from, Subject} from "rxjs";
 
 @Component({
-  selector: 'app-subject',
-  templateUrl: './subject.component.html',
-  styleUrls: ['./subject.component.sass']
+    selector: 'app-subject',
+    templateUrl: './subject.component.html',
+    styleUrls: ['./subject.component.sass'],
+    standalone: false
 })
 export class SubjectComponent implements OnInit {
 

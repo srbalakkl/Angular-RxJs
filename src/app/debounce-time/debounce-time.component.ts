@@ -3,9 +3,10 @@ import {FormBuilder, FormGroup} from "@angular/forms";
 import {debounceTime} from "rxjs";
 
 @Component({
-  selector: 'app-debounce-time',
-  templateUrl: './debounce-time.component.html',
-  styleUrls: ['./debounce-time.component.sass']
+    selector: 'app-debounce-time',
+    templateUrl: './debounce-time.component.html',
+    styleUrls: ['./debounce-time.component.sass'],
+    standalone: false
 })
 export class DebounceTimeComponent implements OnInit {
 

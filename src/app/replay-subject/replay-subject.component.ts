@@ -2,11 +2,10 @@ import {Component} from '@angular/core';
 import {ReplaySubject} from "rxjs";
 
 @Component({
-  selector: 'app-replay-subject',
-  standalone: true,
-  imports: [],
-  templateUrl: './replay-subject.component.html',
-  styleUrl: './replay-subject.component.sass'
+    selector: 'app-replay-subject',
+    imports: [],
+    templateUrl: './replay-subject.component.html',
+    styleUrl: './replay-subject.component.sass'
 })
 export class ReplaySubjectComponent {
   constructor() {

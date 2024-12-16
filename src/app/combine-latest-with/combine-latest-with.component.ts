@@ -2,9 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import {combineLatestWith, map, Observable, of} from "rxjs";
 
 @Component({
-  selector: 'app-combine-latest-with',
-  templateUrl: './combine-latest-with.component.html',
-  styleUrls: ['./combine-latest-with.component.sass']
+    selector: 'app-combine-latest-with',
+    templateUrl: './combine-latest-with.component.html',
+    styleUrls: ['./combine-latest-with.component.sass'],
+    standalone: false
 })
 export class CombineLatestWithComponent implements OnInit {
 

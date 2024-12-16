@@ -3,9 +3,10 @@ import {Observable, Subject, tap, zip} from "rxjs";
 
 type Durum=['flat bread','meat','sauce','tomato','cabbage'];
 @Component({
-  selector: 'app-zip-operator',
-  templateUrl: './zip-operator.component.html',
-  styleUrls: ['./zip-operator.component.sass']
+    selector: 'app-zip-operator',
+    templateUrl: './zip-operator.component.html',
+    styleUrls: ['./zip-operator.component.sass'],
+    standalone: false
 })
 export class ZipOperatorComponent implements OnInit {
   shawarma$!:Observable<Durum>

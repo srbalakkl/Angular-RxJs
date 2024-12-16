@@ -3,11 +3,10 @@ import {interval, share} from "rxjs";
 import {takeUntilDestroyed} from "@angular/core/rxjs-interop";
 
 @Component({
-  selector: 'app-hot-and-cold-observables',
-  standalone: true,
-  imports: [],
-  templateUrl: './hot-and-cold-observables.component.html',
-  styleUrl: './hot-and-cold-observables.component.sass'
+    selector: 'app-hot-and-cold-observables',
+    imports: [],
+    templateUrl: './hot-and-cold-observables.component.html',
+    styleUrl: './hot-and-cold-observables.component.sass'
 })
 export class HotAndColdObservablesComponent implements OnInit,OnDestroy {
   private destroyRef = inject(DestroyRef);

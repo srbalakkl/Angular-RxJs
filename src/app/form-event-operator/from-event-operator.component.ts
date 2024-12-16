@@ -2,9 +2,10 @@ import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {fromEvent} from "rxjs";
 
 @Component({
-  selector: 'app-from-event-operator',
-  templateUrl: './from-event-operator.component.html',
-  styleUrls: ['./from-event-operator.component.sass']
+    selector: 'app-from-event-operator',
+    templateUrl: './from-event-operator.component.html',
+    styleUrls: ['./from-event-operator.component.sass'],
+    standalone: false
 })
 export class FromEventOperatorComponent implements OnInit {
 

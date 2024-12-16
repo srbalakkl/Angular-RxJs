@@ -3,13 +3,12 @@ import {Observable, of, takeWhile} from "rxjs";
 import {AsyncPipe} from "@angular/common";
 
 @Component({
-  selector: 'app-take-while-operator',
-  standalone: true,
-  imports: [
-    AsyncPipe
-  ],
-  templateUrl: './take-while-operator.component.html',
-  styleUrl: './take-while-operator.component.sass'
+    selector: 'app-take-while-operator',
+    imports: [
+        AsyncPipe
+    ],
+    templateUrl: './take-while-operator.component.html',
+    styleUrl: './take-while-operator.component.sass'
 })
 export class TakeWhileOperatorComponent implements OnInit {
 
