@@ -8,7 +8,7 @@
 <ng-container *ngIf="shawarma$ | async as durum">
   <section *ngIf="durum!.length >0">
     <h2>Enjoy😁😁😁</h2>
-    <img alt="shawarma" src="assets/aaa.jpg">
+    <img alt="shawarma" ngSrc="assets/aaa.jpg" height="720" width="1280">
 
     <h5>Ingredients:</h5>
     <pre>{{ durum | json}}</pre>

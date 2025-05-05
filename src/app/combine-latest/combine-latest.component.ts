@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {BehaviorSubject, combineLatest, Observable, takeUntil, zip} from "rxjs";
+import {BehaviorSubject, combineLatest, Observable, zip} from "rxjs";
 
 @Component({
     selector: 'app-combine-latest',
@@ -39,6 +39,10 @@ export class CombineLatestComponent implements OnInit {
       }, 2000);//<-Here, the CombineLatest operator will take the latest value 100 instead of older value 10 like zip operator.
 
       // But the "Zip Operator" doesn't work when the value is changed.
+
+      // setTimeout(() => {
+      //   data.next(100)
+      // }, 3000)
     })
 
     let $obs2 = new Observable((data) => {

@@ -28,6 +28,7 @@ import { TakeUntilWithIntervalComponent } from './take-until-with-interval/take-
 import { ExhaustMapComponent } from './exhaust-map/exhaust-map.component';
 import { provideHttpClient, withInterceptorsFromDi } from "@angular/common/http";
 import { MergeAllComponent } from './merge-all/merge-all.component';
+import {NgOptimizedImage} from "@angular/common";
 
 @NgModule({ declarations: [
         AppComponent,
@@ -58,5 +59,5 @@ import { MergeAllComponent } from './merge-all/merge-all.component';
     ],
     bootstrap: [AppComponent], imports: [BrowserModule,
         AppRoutingModule,
-        ReactiveFormsModule], providers: [provideHttpClient(withInterceptorsFromDi())] })
+        ReactiveFormsModule, NgOptimizedImage], providers: [provideHttpClient(withInterceptorsFromDi())] })
 export class AppModule { }

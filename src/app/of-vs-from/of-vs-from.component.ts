@@ -18,12 +18,13 @@ export class OfVsFromComponent implements OnInit {
      *
      * Of: Emit Sync values
      *
-     * From: Emit Async values
+     * From: Emit Async values.
+     * Note: startWith() operator can be used with from() to convert the async value into a sync one.
      *
      *
      * Of: Emits a sequence of values you specify as arguments.
      *
-     * From: Convert various data sources into observables and then emits the values from those sources sequentially.
+     * From: Convert various data sources into observables and then emit the values from those sources sequentially.
      *
      *
      * Of : Does not take an array, iterable, promise, or another observable-like source as a single argument.
@@ -35,7 +36,7 @@ export class OfVsFromComponent implements OnInit {
      *
      * */
 
-    this.of_Operator();
+    // this.of_Operator();
     this.fromOperator();
   }
 
@@ -67,6 +68,7 @@ export class OfVsFromComponent implements OnInit {
     const imAPromise = fetch('https://pokeapi.co/api/v2/pokemon/ditto').then(
       (response) => response.json()
     );
+
     const imAPromise$ = from(imAPromise);
     imAPromise$.subscribe((result) => console.log({ result }));
 // Will emit the return value of the endpoint that we called to get the information about "Ditto".
@@ -112,6 +114,7 @@ export class OfVsFromComponent implements OnInit {
     const imAPromise = fetch('https://pokeapi.co/api/v2/pokemon/ditto').then(
       (response) => response.json()
     );
+
     const imAPromise$ = of(imAPromise);
     imAPromise$.subscribe((result) => console.log({ result }));
 // Will emit a single item with the type of Promise
