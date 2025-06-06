@@ -32,7 +32,10 @@ import {HotAndColdObservablesComponent} from "./hot-and-cold-observables/hot-and
 import {PreventMemoryLeaksComponent} from "./prevent-memory-leaks/prevent-memory-leaks.component";
 import {ConcatAndExhaustMapComponent} from "./concat-and-exhaust-map/concat-and-exhaust-map.component";
 import {SwitchMapVsExhaustMapComponent} from "./switch-map-vs-exhaust-map/switch-map-vs-exhaust-map.component";
-import {ComputeAndLinkedSignalsComponent} from "./compute-and-linked-signals/compute-and-linked-signals.component";
+import {
+  ComputeAndLinkedSignalsComponent
+} from "./signals/compute-and-linked-signals/compute-and-linked-signals.component";
+import {EffectComponent} from "./signals/effect/effect.component";
 
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: "full"},
@@ -56,7 +59,7 @@ const routes: Routes = [
   {path: 'CombineLatestWith', component: CombineLatestWithComponent},
   {path: 'of_vs_from', component: OfVsFromComponent},
   {path: 'TakeUntilWithInterval', component: TakeUntilWithIntervalComponent},
-  {path: 'ConcatAndExhaustMapComponent',component: ConcatAndExhaustMapComponent},
+  {path: 'ConcatAndExhaustMapComponent', component: ConcatAndExhaustMapComponent},
   {path: 'exhaustMap', component: ExhaustMapComponent},
   {path: 'mergeAll', component: MergeAllComponent},
   {path: 'replaySubject', component: ReplaySubjectComponent},
@@ -64,8 +67,9 @@ const routes: Routes = [
   {path: 'takeWhile', component: TakeWhileOperatorComponent},
   {path: 'hot_cold', component: HotAndColdObservablesComponent},
   {path: 'memoryLeak', component: PreventMemoryLeaksComponent},
-  {path: 'SwitchMapVsExhaustMap',component:SwitchMapVsExhaustMapComponent},
-  {path: 'com_link_signal',component:ComputeAndLinkedSignalsComponent},
+  {path: 'SwitchMapVsExhaustMap', component: SwitchMapVsExhaustMapComponent},
+  {path: 'com_link_signal', component: ComputeAndLinkedSignalsComponent},
+  {path: 'effect_in_signal', component: EffectComponent},
 ];
 
 @NgModule({
