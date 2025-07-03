@@ -1,11 +1,11 @@
 import {Component, OnInit} from '@angular/core';
-import {interval, map, merge, mergeAll, mergeMap, take} from "rxjs";
+import {interval, map, mergeAll, take} from "rxjs";
 
 @Component({
-    selector: 'app-merge-all',
-    templateUrl: './merge-all.component.html',
-    styleUrls: ['./merge-all.component.sass'],
-    standalone: false
+  selector: 'app-merge-all',
+  templateUrl: './merge-all.component.html',
+  styleUrls: ['./merge-all.component.sass'],
+  standalone: false
 })
 export class MergeAllComponent implements OnInit {
 
@@ -29,19 +29,20 @@ export class MergeAllComponent implements OnInit {
     // )
 
     source1$.pipe(
-      map(val => source2$),//<- Here, we are creating a new source2$ for each and every value emitted by the source1$
+      map(val => source2$),//<- Here, I'm mapping the source2$ to all the source 1$ observable individually
       // So that,source1$ value will not print on the console.log
-      mergeAll()//<- mergeAll is basically used to subscribe / receive all the values that are received from the source!$ observable
-    ).subscribe( r => {
+      mergeAll()//<- mergeAll is basically used to subscribe / receive all the values that are received from the source2$ observable
+      //   if mergeAll() is not used than only the source2$ observable operator (not it's value) will be emitted.
+    ).subscribe(r => {
       console.log(r)
     })
 
-    // Merge map is
-    source1$.pipe(
-      mergeMap(val => source2$),//<- emitted for each value emitted by the source1
-    ).subscribe( r => {
-      console.log(r)
-    })
+    // // Merge map is the combination of map() + mergeAll() and basically both of the operators are used to subscribe to values of the observable.
+    // source1$.pipe(
+    //   mergeMap(val => source2$),//<- emitted for each value emitted by the source1
+    // ).subscribe( r => {
+    //   console.log(r)
+    // })
 
 
   }

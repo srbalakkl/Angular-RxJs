@@ -3,10 +3,10 @@ import {FormBuilder, FormGroup} from "@angular/forms";
 import {debounceTime} from "rxjs";
 
 @Component({
-    selector: 'app-debounce-time',
-    templateUrl: './debounce-time.component.html',
-    styleUrls: ['./debounce-time.component.sass'],
-    standalone: false
+  selector: 'app-debounce-time',
+  templateUrl: './debounce-time.component.html',
+  styleUrls: ['./debounce-time.component.sass'],
+  standalone: false
 })
 export class DebounceTimeComponent implements OnInit {
 
@@ -43,11 +43,13 @@ export class DebounceTimeComponent implements OnInit {
      * Optional. Default is asyncScheduler.
      *
      * note:It is mainly used in search operation. because,
-     * You don't want to make API call for every single keys(valueChange event by FormControl)
+     * You don't want to make an API call for every single keys.(valueChange event by FormControl)
      * pressed by an end user.
      * */
 
-    this.fg.get('keypress')?.valueChanges.pipe(debounceTime(1000))
+    this.fg.get('keypress')?.valueChanges.pipe(
+      debounceTime(1000)
+    )
       .subscribe(data => {
         console.log(data);
       })
