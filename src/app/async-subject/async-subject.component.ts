@@ -14,11 +14,11 @@ export class AsyncSubjectComponent {
     const sub = new AsyncSubject();
 
     sub.subscribe(console.log);
-    sub.next(123); //nothing logged
+    sub.next(123);
     sub.subscribe(console.log);
     sub.next(500)
-    sub.next(456); //nothing logged
-    sub.complete(); //456, 456 logged by both subscribers
+    sub.next(456);
+    sub.complete(); //Both subscribers log only the last 456
   }
 
 

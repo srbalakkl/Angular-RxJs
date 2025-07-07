@@ -36,8 +36,24 @@ export class OfVsFromComponent implements OnInit {
      *
      * */
 
+    let a = 'test';
+    let ob = of('obs test');
+
+    console.log(a)
+    ob.subscribe({
+      next: (v) => {
+        console.log(v)
+      },
+      error: (err) => {
+        console.log(err)
+      },
+      complete: () => {
+        console.log('complete')
+      }
+    });
+
     // this.of_Operator();
-    this.fromOperator();
+    // this.fromOperator();
   }
 
   fromOperator(){
@@ -83,30 +99,30 @@ export class OfVsFromComponent implements OnInit {
 
     const imAnIterable = iterator();
     const imAnIterable$ = from(imAnIterable);
-    imAnIterable$.subscribe((result) => console.log({ result }));
+    imAnIterable$.subscribe((result) => console.log({result}));
 // Will emit each value that we gave to the iterator item within the function
 // result: "iterator-1"
 // result: "iterator-2"
 // result: "iterator-3"
   }
 
-  of_Operator(){
+  of_Operator() {
     /******** of Operator in rxjs *********/
     const str = 'Hello World';
     const str$ = of(str);
-    str$.subscribe((result) => console.log({ result }));
+    str$.subscribe((result) => console.log({result}));
 // Will emit a single item with the type of string
 // result: "Hello World"
 
     const arr = [1, 2, 3];
     const arr$ = of(arr);
-    arr$.subscribe((result) => console.log({ result }));
+    arr$.subscribe((result) => console.log({result}));
 // Will emit a single item with the type of Array<number>
 // result: [1,2,3]
 
     const arr2 = [4, 5, 6];
     const arr2$ = of(arr, arr2);
-    arr2$.subscribe((result) => console.log({ result }));
+    arr2$.subscribe((result) => console.log({result}));
 // Will emit a single two values each with the type of Array<number>
 // result: [1,2,3]
 // result: [4,5,6]
@@ -116,7 +132,7 @@ export class OfVsFromComponent implements OnInit {
     );
 
     const imAPromise$ = of(imAPromise);
-    imAPromise$.subscribe((result) => console.log({ result }));
+    imAPromise$.subscribe((result) => console.log({result}));
 // Will emit a single item with the type of Promise
 // result: Promise
 
@@ -129,7 +145,7 @@ export class OfVsFromComponent implements OnInit {
 
     const imAnIterable = iterator();
     const imAnIterable$ = of(imAnIterable);
-    imAnIterable$.subscribe((result) => console.log({ result }));
+    imAnIterable$.subscribe((result) => console.log({result}));
 // Will emit a single item with the type of Object
 // result: Object
   }
