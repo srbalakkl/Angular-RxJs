@@ -2,14 +2,15 @@ import {Component, OnInit} from '@angular/core';
 import {Observable} from "rxjs";
 
 @Component({
-    selector: 'app-rxjs-tutor',
-    templateUrl: './rxjs-tutor.component.html',
-    styleUrls: ['./rxjs-tutor.component.sass'],
-    standalone: false
+  selector: 'app-rxjs-tutor',
+  templateUrl: './rxjs-tutor.component.html',
+  styleUrls: ['./rxjs-tutor.component.sass'],
+  standalone: false
 })
 export class RxjsTutorComponent implements OnInit {
 
   agents!: Observable<string>;
+
   // agentName!: string;
 
   constructor() {
@@ -69,11 +70,13 @@ export class RxjsTutorComponent implements OnInit {
     //   console.log('agent name = ', this.agentName)
     // })
 
-    this.agents.subscribe({//<- Here we are subscribing to the observer (i.e, wrapped inside the {})
-      next: x => console.log('Observer got a next value: ' + x),
-      error: err => console.error('Observer got an error: ' + err),
-      complete: () => console.log('Observer got a complete notification'),
-    })
+    let observer = {//<- Here we are subscribing to the observer (i.e., wrapped inside the {})
+      next: (x: any) => console.log('Observer got a next value: ' + x),
+      error: (err: any) => console.error('Observer got an error: ' + err),
+      complete: () => console.log('Observer got a complete notification')
+    }
+
+    this.agents.subscribe(observer);
 
 
   }

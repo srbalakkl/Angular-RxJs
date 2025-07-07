@@ -12,6 +12,7 @@ import {takeUntilDestroyed} from "@angular/core/rxjs-interop";
 export class PreventMemoryLeaksComponent implements OnInit, OnDestroy {
   private unsubscribe$: Subject<void> = new Subject<void>();
   private destroyRef = inject(DestroyRef);
+
   ngOnInit(): void {
     interval(1000).pipe(
       takeUntil(this.unsubscribe$),
@@ -20,7 +21,7 @@ export class PreventMemoryLeaksComponent implements OnInit, OnDestroy {
       // takeUntilDestroyed()
       // operator must be put at the end of the line because it will now work for downstream observable
       // and cause m/y leak if placed in the wrong place
-      ).subscribe(r=>console.log(r));
+    ).subscribe(r => console.log(r));
   }
 
   ngOnDestroy() {

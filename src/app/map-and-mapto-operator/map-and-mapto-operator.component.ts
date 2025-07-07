@@ -1,6 +1,5 @@
 import {Component, OnInit} from '@angular/core';
 import {map, mapTo, of} from "rxjs";
-import {log} from "@angular-devkit/build-angular/src/builders/ssr-dev-server";
 
 @Component({
     selector: 'app-map-and-mapto-operator',

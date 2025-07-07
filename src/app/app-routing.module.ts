@@ -36,6 +36,7 @@ import {
   ComputeAndLinkedSignalsComponent
 } from "./signals/compute-and-linked-signals/compute-and-linked-signals.component";
 import {EffectComponent} from "./signals/effect/effect.component";
+import {UnicastAndMulticastComponent} from "./basics/unicast-and-multicast/unicast-and-multicast.component";
 
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: "full"},
@@ -70,6 +71,7 @@ const routes: Routes = [
   {path: 'SwitchMapVsExhaustMap', component: SwitchMapVsExhaustMapComponent},
   {path: 'com_link_signal', component: ComputeAndLinkedSignalsComponent},
   {path: 'effect_in_signal', component: EffectComponent},
+  {path: 'uni_multi', component: UnicastAndMulticastComponent}
 ];
 
 @NgModule({

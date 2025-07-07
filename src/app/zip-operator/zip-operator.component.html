@@ -5,12 +5,13 @@
 <button (click)="_tomato.next('tomato')" type="button">Add Tomato</button>
 <button (click)="_cabbage.next('cabbage')" type="button">Add Cabbage</button>
 
-<ng-container *ngIf="shawarma$ | async as durum">
-  <section *ngIf="durum!.length >0">
-    <h2>Enjoy😁😁😁</h2>
-    <img alt="shawarma" ngSrc="assets/aaa.jpg" height="720" width="1280">
-
-    <h5>Ingredients:</h5>
-    <pre>{{ durum | json}}</pre>
-  </section>
-</ng-container>
+@if (shawarma$ | async; as durum) {
+  @if (durum!.length >0) {
+    <section>
+      <h2>Enjoy😁😁😁</h2>
+      <img alt="shawarma" ngSrc="assets/aaa.jpg" height="720" width="1280">
+      <h5>Ingredients:</h5>
+      <pre>{{ durum | json}}</pre>
+    </section>
+  }
+}
